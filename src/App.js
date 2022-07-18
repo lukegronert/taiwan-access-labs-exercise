@@ -11,7 +11,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" exact element={<UserListing />} />
-          <Route path="users/:userLogin" exact element={<UserDetail />} />
+          <Route path="/users/:userLogin" exact element={<UserDetail />} />
           <Route path="*" element={<h1>404 Page Not Found</h1>} />
         </Routes>
       </Router>

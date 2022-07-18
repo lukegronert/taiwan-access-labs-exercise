@@ -7,7 +7,7 @@ export const setUsers = (users) => {
     }
 }
 
-export const selectedUser = (user) => {
+export const setSelectedUser = (user) => {
     return {
         type: ActionTypes.SELECTED_USER,
         payload: user,
