@@ -6,3 +6,10 @@ export const setUsers = (users) => {
         payload: users,
     }
 }
+
+export const selectedUser = (user) => {
+    return {
+        type: ActionTypes.SELECTED_USER,
+        payload: user,
+    }
+}

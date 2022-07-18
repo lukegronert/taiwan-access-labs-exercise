@@ -12,3 +12,12 @@ export const userReducer = (state = initialState, {type, payload}) => {
             return state;
     }
 }
+
+export const selectedUserReducer = (state = initialState, {type, payload}) => {
+    switch(type) {
+        case ActionTypes.SELECTED_USER:
+            return {...state, user: payload};
+        default:
+            return state;
+    }
+}
