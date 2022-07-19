@@ -1,6 +1,8 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
+import Avatar from '@mui/material/Avatar';
+import Badge from '@mui/material/Badge';
 import '../css/userComponent.css';
 
 const UserComponent = () => {
@@ -10,22 +12,27 @@ const UserComponent = () => {
     const renderList = users.map((user) => {
         const {login, avatar_url, site_admin} = user;
         return (
-            <div key={login} className="user-component-container">
+            <div className="user-component-container" key={login}>
                 <Link to={`/users/${login}`}>
-                    <p className="user-component-login">{login}</p>
-                    <img className="user-component-image" src={avatar_url} alt={login} />
-                        {site_admin === true ? (
-                            <p className="user-component-admin-badge">admin</p>
-                            ) : (
-                                <p className="user-component-admin-badge badge-invisible">admin</p>
-                            )}
+                    {site_admin === true ? (
+                        <Badge badgeContent={'admin'} color="primary">
+                            <Avatar sx={{ width: 100, height: 100 }}>
+                                <img src={avatar_url} alt={login} className="user-component-image" />
+                            </Avatar>
+                        </Badge>) : (
+                        <Avatar sx={{ width: 100, height: 100 }}>
+                            <img src={avatar_url} alt={login} className="user-component-image" />
+                        </Avatar>
+                        )}
+                    <p>{login}</p>
                 </Link>
             </div>
         )
     })
+
     return (
         <>{renderList}</>
-    )
-}
+    );
+  }
 
 export default UserComponent;

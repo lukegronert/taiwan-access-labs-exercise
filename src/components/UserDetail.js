@@ -2,7 +2,11 @@ import React, { useEffect } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {useParams} from 'react-router-dom';
 import {setSelectedUser} from '../redux/actions/userActions';
-import '../css/userDetail.css';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Badge from '@mui/material/Badge';
 
 const UserDetail = () => {
     const user = useSelector((state) => state.user)
@@ -24,25 +28,31 @@ const UserDetail = () => {
             fetchUser();
         }
     }, [userLogin])
-    return (
-            <div key={login} className="user-detail-container">
-                <img src={avatar_url} alt={login} className="user-detail-image" />
-                <div className="user-detail-content">
-                    <p className="user-detail-name">
-                        Name: {name !== null ? name : 'Unspecified'}
-                        {site_admin === true ? (
-                        <span className="user-detail-admin-badge">admin</span>
-                        ) : (
-                            null
-                        )}
-                    </p>
-                    <p className="user-detail-bio">Bio: {bio !== null ? bio : 'Unspecified'}</p>
-                    <p className="user-detail-login">Username: {login !== null ? login : 'Unspecified'}</p>
-                    <p className="user-detail-location">Location: {location !== null ? location : 'Unspecified'}</p>
-                    <p>Blog Link: {blog !== null ? <a href={blog} className="user-detail-blog">{blog}</a> : 'Unspecified'}</p>
-                </div>
-            </div>
-    )
+  return (
+    <Card sx={{ maxWidth: 300, margin: 'auto' }}>
+      <img src={avatar_url} alt={name} height="300" width="300" />
+      <CardContent sx={{ padding: '5px'}}>
+        <Typography gutterBottom variant="h5" component="div">
+          {name}
+        </Typography>
+        {site_admin === true ? (
+            <Badge badgeContent={'admin'} color="primary" sx={{ marginBottom: '10px'}}>
+            </Badge>) : (
+                null
+            )}
+        <Typography variant="body2" color="text.secondary">
+          {bio}
+        </Typography>
+        <Typography variant="subtitle2" color="text.secondary" mt={1}>
+          {login}
+        </Typography>
+        <Typography variant="subtitle2" color="text.secondary" mt={1}>
+          {location}
+        </Typography>
+      </CardContent>
+      <a href={blog}><Button size="small" style={{ marginBottom: '10px'}}>Blog</Button></a>
+    </Card>
+  );
 }
 
 export default UserDetail;
