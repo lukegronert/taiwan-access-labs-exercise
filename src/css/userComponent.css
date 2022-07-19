@@ -26,3 +26,8 @@
     text-decoration: none;
     color: white;
 }
+
+.user-component-item-count {
+    margin: auto;
+    font-size: 12px;
+}

@@ -26,12 +26,16 @@ const UserComponent = () => {
                         )}
                     <p>{login}</p>
                 </Link>
+                
             </div>
         )
     })
 
     return (
-        <>{renderList}</>
+        <>
+            {renderList}
+            <p className="user-component-item-count">This page contains {users.length} items.</p>
+        </>
     );
   }
 

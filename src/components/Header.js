@@ -1,8 +1,9 @@
 import React from 'react';
+import '../css/header.css';
 
 const Header = () => {
     return (
-        <div>HEADER</div>
+        <h1 className="header">GitHub User List</h1>
     )
 }
 
