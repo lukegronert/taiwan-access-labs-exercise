@@ -1,6 +1,6 @@
 # GitHub User List
 
-GitHub User List is a project that uses the Github API to create a list of Github users, along with a detail page to view more user information.
+GitHub User List is a project that uses the Github API to create a list of Github users, along with a detail page to view more user information. [View the live demo](https://github.com/lukegronert/taiwan-access-labs-exercise)
 
 ## Installation
 
@@ -44,7 +44,7 @@ Other packages include:
 
 ## Requirements met
 
-I was tasked with created a website which shows GitHub users in a list.
+My task was to create a website which shows GitHub users in a list.
 
 I used React hooks to design my components and Redux to manage my state. I chose to design the UI with Material UI for React in order to focus more on component design and data flow as instructed.
 
