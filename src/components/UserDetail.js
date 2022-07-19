@@ -29,7 +29,7 @@ const UserDetail = () => {
         }
     }, [userLogin])
   return (
-    <Card sx={{ maxWidth: 300, margin: 'auto' }}>
+    <Card sx={{ maxWidth: 300, margin: 'auto', marginTop: '50px' }}>
       <img src={avatar_url} alt={name} height="300" width="300" />
       <CardContent sx={{ padding: '5px'}}>
         <Typography gutterBottom variant="h5" component="div">
