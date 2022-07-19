@@ -1,12 +1,12 @@
-import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Header from './components/Header';
 import UserListing from './components/UserListing';
 import UserDetail from './components/UserDetail';
+import './css/app.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app-container">
       <Router>
         <Header />
         <Routes>
