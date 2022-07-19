@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/taiwan-access-labs-exercise/static/css/main.03e56bea.css",
+    "main.js": "/taiwan-access-labs-exercise/static/js/main.8b0ec36c.js",
+    "index.html": "/taiwan-access-labs-exercise/index.html",
+    "main.03e56bea.css.map": "/taiwan-access-labs-exercise/static/css/main.03e56bea.css.map",
+    "main.8b0ec36c.js.map": "/taiwan-access-labs-exercise/static/js/main.8b0ec36c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03e56bea.css",
+    "static/js/main.8b0ec36c.js"
+  ]
+}
