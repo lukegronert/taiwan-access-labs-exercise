@@ -68,5 +68,12 @@ The Detail UI page contains:
 
  All of this information is only shown if it is available from the user.
 
+## Future Optimizations
+With more time, I would:
+ - add pagination to the list of users, limiting the amount of users per page to 20. 
+ - add a back button to the user detail page.
+ - add an action to remove the selected user after the deail page is loaded. This way, when the detail page is navigated to again, it will not briefly show the last selected user before loading the new one.
+ - add loaders that would show on screen until the API call has been completed.
+
 ## Authors
 This project was created solely by [Luke Gronert](https://www.lukegronert.com)
