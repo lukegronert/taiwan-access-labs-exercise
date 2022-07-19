@@ -10,8 +10,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" exact element={<UserListing />} />
-          <Route path="/users/:userLogin" exact element={<UserDetail />} />
+          <Route path="/taiwan-access-labs-exercise" exact element={<UserListing />} />
+          <Route path="/taiwan-access-labs-exercise/users/:userLogin" exact element={<UserDetail />} />
           <Route path="*" element={<h1>404 Page Not Found</h1>} />
         </Routes>
       </Router>

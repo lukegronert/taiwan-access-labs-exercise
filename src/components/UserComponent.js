@@ -26,7 +26,6 @@ const UserComponent = () => {
                         )}
                     <p>{login}</p>
                 </Link>
-                
             </div>
         )
     })
