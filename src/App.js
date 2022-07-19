@@ -7,8 +7,8 @@ import './css/app.css';
 function App() {
   return (
     <div className="app-container">
-      <Router>
-        <Header />
+      <Router basename="/" >
+        <Header/>
         <Routes>
           <Route path="/taiwan-access-labs-exercise" exact element={<UserListing />} />
           <Route path="/taiwan-access-labs-exercise/users/:userLogin" exact element={<UserDetail />} />
