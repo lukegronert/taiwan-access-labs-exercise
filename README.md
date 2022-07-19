@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# GitHub User List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GitHub User List is a project that uses the Github API to create a list of Github users, along with a detail page to view more user information.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+Use the package manager [npm](https://www.npmjs.com/) to install the project dependencies:
 
-### `npm start`
+```bash
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once all of the dependencies have been installed, go to the project directory and enter this command:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm run start
+```
 
-### `npm test`
+A development server will start. Your browser should open after a few moments and load the webpage. If it does not, ensure there are no errors and go to the Local url shown in your terminal to see your project. (Example: http://localhost:3000)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## API
 
-### `npm run build`
+This project uses the GitHub API. It uses two different endpoints to fetch the necessary data.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```js
+// Get all user data
+"https://api.github.com/users"
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+// Get specific user data  
+"https://api.github.com/users/{SPECIFIC_USERNAME}"
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technlogies Used
 
-### `npm run eject`
+This project was created with npm v8.11.0, create-react-app v5.0.1, and Material UI for React.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Other packages include:
+ - redux v4.2.0
+ - react-redux v8.0.2
+ - react-router-dom v6.3.0
+ - @mui/material v5.9.1
+ - @emotion/react v11.9.3
+ - @emotion/styled v5.9.1
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Requirements met
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+I was tasked with created a website which shows GitHub users in a list.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+I used React hooks to design my components and Redux to manage my state. I chose to design the UI with Material UI for React in order to focus more on component design and data flow as instructed.
 
-## Learn More
+The List page includes these for all users:
+ - avatar_url
+ - login
+ - site_admin (only shows on users that are site admins)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The List page includes the number of items on the page, it is non-paginated, and it is limited to 100 users.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I chose to complete the "Bonus Stage" of the exercise as well, which was creating a Detail page that the user is redirected to when they click on a user on the List page.
 
-### Code Splitting
+The Detail UI page contains:
+ - avatar_url (user's photo)
+ - name (real name)
+ - bio
+ - login (username)
+ - site_admin (only shows on users that are site admins)
+ - location
+ - blog (url to user's blog)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ All of this information is only shown if it is available from the user.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Authors
+This project was created solely by [Luke Gronert](https://www.lukegronert.com)
