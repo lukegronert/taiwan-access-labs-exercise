@@ -1,6 +1,6 @@
 # GitHub User List
 
-GitHub User List is a project that uses the Github API to create a list of Github users, along with a detail page to view more user information. [View the live demo](https://github.com/lukegronert/taiwan-access-labs-exercise)
+GitHub User List is a project that uses the Github API to create a list of Github users, along with a detail page to view more user information. [View the live demo](https://lukegronert.com/taiwan-access-labs-exercise/)
 
 ## Installation
 
@@ -16,7 +16,7 @@ Once all of the dependencies have been installed, go to the project directory an
 npm run start
 ```
 
-A development server will start. Your browser should open after a few moments and load the webpage. If it does not, ensure there are no errors and go to the Local url shown in your terminal to see your project. (Example: http://localhost:3000)
+A development server will start. Your browser should open after a few moments and load the webpage. If it does not, ensure there are no errors and go to the local url shown in your terminal to see your project. (Example: http://localhost:3000)
 
 ## API
 
